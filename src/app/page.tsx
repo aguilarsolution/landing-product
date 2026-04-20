@@ -1,13 +1,18 @@
+import CTASection from "@/components/app/sections/cta";
+import Features from "@/components/app/sections/features";
+import Hero from "@/components/app/sections/hero";
+import HowItWorks from "@/components/app/sections/howItWorks";
+import LogosBar from "@/components/app/sections/logosBar";
+import Pricing from "@/components/app/sections/pricing";
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            Welcome to the next project, the best project
-          </h1>
-        </div>
-      </main>
-    </div>
+    <main className="dark:bg-dark max-w-300 mx-auto">
+      <Hero></Hero>
+      <LogosBar></LogosBar>
+      <Features></Features>
+      <HowItWorks></HowItWorks>
+      <Pricing></Pricing>
+      <CTASection></CTASection>
+    </main>
   );
 }
