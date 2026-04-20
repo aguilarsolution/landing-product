@@ -5,7 +5,6 @@ import { cn } from "@/lib/utils";
 import Header from "@/components/app/sections/header";
 import Footer from "@/components/app/sections/footer";
 import ThemeProvider from "./theme-provider";
-import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -23,6 +22,40 @@ export const metadata: Metadata = {
   title: "The Door",
   applicationName: "The Door",
   description: "System Access Management",
+  keywords: [
+    "thedoor",
+    "landingpage",
+    "landing",
+    "example",
+    "aguilarsolution",
+    "luisaguilar",
+    "cibersecurity",
+  ],
+  authors: [{ name: "LuisAguilar", url: "https://github.com/aguilarsolution" }],
+  creator: "aguilarsolution",
+  publisher: "Luis Aguilar",
+  openGraph: {
+    images: [
+      { url: "/preview.webp", alt: "System accees Management The Door" },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  verification: {
+    google: "google",
+    yandex: "yandex",
+    yahoo: "yahoo",
+  },
+  category: "technology",
 };
 
 export default function RootLayout({
@@ -44,23 +77,6 @@ export default function RootLayout({
         inter.variable,
       )}
     >
-      <Head>
-        <meta property="og:image" content="/preview.webp" />
-        <meta
-          property="og:image:alt"
-          content="Security, example, cibersecurity"
-        />
-        <meta name="twitter:title" content="The Door" />
-        <meta
-          name="twitter:description"
-          content="Landingpage a system access management (example)"
-        />
-        <meta name="twitter:url" content="https://x.com/@aguilarsolution" />
-        <meta name="twitter:image:src" content="/preview.webp" />
-        <meta name="twitter:image:alt" content="the door landingpage " />
-        <meta name="twitter:creator" content="@aguilarsolution" />
-        <meta name="twitter:site" content="@aguilarsolution" />
-      </Head>
       <body className="min-h-full">
         <ThemeProvider
           attribute={"class"}
