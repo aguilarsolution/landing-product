@@ -12,7 +12,7 @@ const Section = ({
   ...props
 }: ComponentSectionProps) => {
   return (
-    <section className={`flex flex-col px-6 md:px-0 ${extraClass}`} {...props}>
+    <section className={`flex flex-col px-6 xl:px-0 ${extraClass}`} {...props}>
       {sectionTitle && (
         <h2 className="text-center font-mono font-semibold py-6">
           {sectionTitle}

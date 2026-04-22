@@ -6,9 +6,9 @@ import { Badge } from "@/components/ui/badge";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col justify-center min-h-screen  md:-my-12">
-      <div className="flex flex-col-reverse  md:flex-row justify-center items-center">
-        <div className="w-full md:w-1/2 px-6 md:px-0">
+    <section className="flex flex-col justify-center min-h-screen  md:-my-12 px-6 xl:px-0">
+      <div className="flex  flex-col  md:flex-row justify-center items-center">
+        <div className="w-full md:w-1/2">
           <Badge className="-mb-6 inline-flex justify-end" variant={"outline"}>
             ✦ Now in public beta
           </Badge>
@@ -24,8 +24,22 @@ const Hero = () => {
             teams. Grant, revoke, and audit permisisons across your entire
             infrastructure - without any complexity{" "}
           </h2>
+          <div className="py-3 px-6 md:px-0 flex  items-center justify-center md:justify-start gap-x-3">
+            <Link
+              href={"/free-trial"}
+              className={buttonVariants({ variant: "default", size: "lg" })}
+            >
+              Get started free
+            </Link>
+            <Link
+              href={"/docs"}
+              className={buttonVariants({ variant: "outline", size: "lg" })}
+            >
+              View docs
+            </Link>
+          </div>
         </div>
-        <div className="w-full md:w-200 p-6 md:p-0 h-full overflow-hidden flex justify-center items-center flex-1">
+        <div className="w-full md:w-200  md:p-0 h-full overflow-hidden flex justify-center items-center flex-1">
           <Image
             src={"/dashboard-example.webp"}
             width={500}
@@ -36,20 +50,6 @@ const Hero = () => {
             className="w-full h-full"
           ></Image>
         </div>
-      </div>
-      <div className="py-3 px-6 md:px-0 flex  items-center justify-center md:justify-start gap-x-3">
-        <Link
-          href={"/free-trial"}
-          className={buttonVariants({ variant: "default", size: "lg" })}
-        >
-          Get started free
-        </Link>
-        <Link
-          href={"/docs"}
-          className={buttonVariants({ variant: "outline", size: "lg" })}
-        >
-          View docs
-        </Link>
       </div>
     </section>
   );

@@ -36,11 +36,11 @@ const siteMap: SiteMapSection[] = [
 ];
 const Footer = () => {
   return (
-    <footer className="max-w-300 mx-auto mt-24 py-12 px-6 md:px-0">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-y-0 gap-0 md:gap-6 jusfity-around py-3 md:py-6">
-        <div className="flex gap-3 items-center jusfity-center">
-          <Logo extraClass="w-50 h-50"></Logo>
-          <p>
+    <footer className="max-w-300 mx-auto mt-24 py-12 px-6 lg:px-0">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-0 md:gap-6 jusfity-around py-3 md:py-6">
+        <div className="md:flex hidden gap-1 md:gap-3 items-center jusfity-center">
+          <Logo extraClass=" md:w-30 md:h-30"></Logo>
+          <p className="">
             <b>The Door</b> — Access control infrastructure for modern
             engineering teams.
           </p>
@@ -73,7 +73,7 @@ const Footer = () => {
           );
         })}
       </div>
-      <div>
+      <div className="pt-24">
         <span className="flex items-center justify-center w-full text-center text-foreground/70">
           © {`${new Date().getFullYear()}`} The Door Technologies, Inc. All
           rights reserved.
